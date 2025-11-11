@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { COLORS } from "../constants/colors";
 
 export default function ProjectCarousel() {
   return (
@@ -11,7 +12,10 @@ export default function ProjectCarousel() {
       transition={{ duration: 0.7 }}
       className="w-full mt-8 mb-8"
     >
-      <p className="text-2xl font-bold text-[#61E294] w-1/2 p-4 text-center mx-auto mb-4">
+      <p
+        className="text-2xl font-bold w-1/2 p-4 text-center mx-auto mb-4"
+        style={{ color: COLORS.accent }}
+      >
         Here are some of my favorite school projects:
       </p>
       <div
@@ -33,7 +37,20 @@ export default function ProjectCarousel() {
               width: "562.5px",
             }}
           >
-            <div className="relative overflow-hidden rounded-lg hover:border-[#61E294]/80 transition-all hover:shadow-lg hover:shadow-[#61E294]/20 w-full h-full">
+            <div
+              className="relative overflow-hidden rounded-lg transition-all w-full h-full border-2"
+              style={{
+                borderColor: "transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${COLORS.accent}80`;
+                e.currentTarget.style.boxShadow = `0 10px 15px -3px ${COLORS.accent}20, 0 4px 6px -2px ${COLORS.accent}20`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "transparent";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
               <Image
                 src="/pission-preview.png"
                 alt="PISSION - The Quickest Route to Relief"
@@ -53,7 +70,20 @@ export default function ProjectCarousel() {
               width: "250px",
             }}
           >
-            <div className="relative overflow-hidden rounded-lg hover:border-[#61E294]/80 transition-all hover:shadow-lg hover:shadow-[#61E294]/20 w-full h-full">
+            <div
+              className="relative overflow-hidden rounded-lg transition-all w-full h-full border-2"
+              style={{
+                borderColor: "transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${COLORS.accent}80`;
+                e.currentTarget.style.boxShadow = `0 10px 15px -3px ${COLORS.accent}20, 0 4px 6px -2px ${COLORS.accent}20`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "transparent";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
               <Image
                 src="/microdoze.png"
                 alt="Microdoze - A psychedelic trip in a frat house"
@@ -70,7 +100,20 @@ export default function ProjectCarousel() {
               width: "533.33px",
             }}
           >
-            <div className="relative overflow-hidden rounded-lg hover:border-[#61E294]/80 transition-all hover:shadow-lg hover:shadow-[#61E294]/20 w-full h-full">
+            <div
+              className="relative overflow-hidden rounded-lg transition-all w-full h-full border-2"
+              style={{
+                borderColor: "transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${COLORS.accent}80`;
+                e.currentTarget.style.boxShadow = `0 10px 15px -3px ${COLORS.accent}20, 0 4px 6px -2px ${COLORS.accent}20`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "transparent";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
               <iframe
                 style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
                 width="100%"
