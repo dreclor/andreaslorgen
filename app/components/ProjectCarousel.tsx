@@ -1,9 +1,19 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function ProjectCarousel() {
   return (
-    <div className="w-full mt-8 mb-8">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7 }}
+      className="w-full mt-8 mb-8"
+    >
+      <p className="text-2xl font-bold text-[#61E294] w-1/2 p-4 text-center mx-auto mb-4">
+        Here are some of my favorite school projects:
+      </p>
       <div
         className="overflow-x-auto scrollbar-hide scroll-smooth"
         style={{ scrollBehavior: "smooth" }}
@@ -73,6 +83,6 @@ export default function ProjectCarousel() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
